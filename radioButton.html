@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="myfunction()">
+    <form onsubmit="store()">
+    <p>Choose Your Favrite Batsman</p>
+    <input type="radio" id="bats" name="fav-batsman" value="Virat Kholi">
+    <label for="fav-bats">Virat Kholi</label><br>
+    <input type="radio" id="bats" name="fav-batsman" value="Babar">
+    <label for="fav-bats">Babar Azam</label><br>
+    <input type="radio" id="bats" name="fav-batsman" value="Dhoni">
+    <label for="fav-bats">Dhoni</label><br><br>
+    <input type="submit" value="submit">
+</form>
+<p>Here We Learn About OnChange Method</p>
+<select id="MySelect" onchange="onchangeEvent()">
+    <option value="Swift">Swift</option>
+    <option value="Car">Car</option>
+    <option value="Baleno"></option>
+    <option value="Maruti"></option>
+    <option value="Ecco"></option>
+</select >
+<p id="button" onclick="React()">click Here</p>
+<script>
+    function store(){
+        var fav = document.getElementById('bats').value;
+        alert("Are You Sure To Submitt Form");
+        document.write(" Fav Batsman :" + fav);
+    }
+
+    function React(){
+        document.getElementById('button').innerHTML = "Here We Learn About Onclick Method";
+
+    }
+    function myfunction(){
+        alert('Page Is Loaded');
+    } 
+
+    function onchangeEvent(){
+        var selects = document.getElementById('MySelect').value;
+        document.write(' You select This Item :' + selects); 
+    }
+</script>
+</body>
+</html>
